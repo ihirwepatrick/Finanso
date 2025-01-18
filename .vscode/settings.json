@@ -1,4 +1,13 @@
 {
-    "cmake.sourceDirectory": "D:/Projects/finanso/linux",
-    "java.search.scope": "all"
+  "cmake.sourceDirectory": "D:/Projects/finanso/linux",
+  "java.search.scope": "all",
+  "task.allowAutomaticTasks": true,
+  "debug.openDebug": "neverOpen",
+  "terminal.integrated.inheritEnv": false,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
 }

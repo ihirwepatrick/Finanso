@@ -108,26 +108,10 @@ class BottomDrawerContent extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.transparent, // No background color
-                    side: BorderSide(
-                      color: Color(0xFF2B44FB), // Stroke color
-                      width: 2, // Stroke width
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          16), // Optional: rounded corners
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text(
-                    'Cancel',
-                    style: TextStyle(color: AppColors.primary),
-                  ),
-                ),
+                child: CustomButton(text: "Cancel", onPressed: () {
+    Navigator.pop(context);
+    }, isOutlined: true, textColor: AppColors.primary,
+                )
               ),
               const SizedBox(width: 10), // Same gap between buttons
               Expanded(
